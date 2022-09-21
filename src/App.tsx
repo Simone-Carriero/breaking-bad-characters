@@ -4,11 +4,13 @@ import Header from './components/header/Header'
 import Search from './components/search/Search'
 
 function App() {
+  const [query, setQuery] = useState('')
 
+  console.log(query)
   return (
     <div className="App">
       <Header />
-      <Search />
+      <Search query={query} setQuery={setQuery} />
     </div>
   )
 }
