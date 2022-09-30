@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './App.scss';
 import Header from './components/header/Header';
-import Main from './components/main/Main';
+import MainSection from './components/main-section/MainSection';
 import Search from './components/search/Search';
 import Spinner from './components/spinner/Spinner';
 
@@ -66,7 +66,7 @@ function App() {
           {error}
         </div>
       )}
-      {loading ? <Spinner /> : <Main characters={characters} />}
+      {loading ? <Spinner /> : <MainSection characters={characters} />}
     </div>
   );
 }

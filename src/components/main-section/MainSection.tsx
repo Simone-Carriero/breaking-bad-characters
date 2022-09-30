@@ -1,12 +1,12 @@
 import { Data } from '../../App';
 import Character from '../character/Character';
-import './Main.scss';
+import './MainSection.scss';
 
 type CharactersProps = {
   characters: Data[];
 };
 
-const Main = ({ characters }: CharactersProps) => {
+const MainSection = ({ characters }: CharactersProps) => {
   return (
     <main className='main'>
       {characters.map((character) => (
@@ -19,4 +19,4 @@ const Main = ({ characters }: CharactersProps) => {
   );
 };
 
-export default Main;
+export default MainSection;
