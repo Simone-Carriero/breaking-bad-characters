@@ -1,21 +1,22 @@
-import { Data } from '../../App'
-import Character from '../character/Character'
-import './Main.scss'
+import { Data } from '../../App';
+import Character from '../character/Character';
+import './Main.scss';
 
 type CharactersProps = {
-  characters: Data[]
-}
+  characters: Data[];
+};
 
-const Main = ({characters}: CharactersProps) => {
-
+const Main = ({ characters }: CharactersProps) => {
   return (
     <main className='main'>
-      {
-        characters.map(character => <Character key={character.char_id} character={character} />)
-      }
-      
+      {characters.map((character) => (
+        <Character
+          key={character.char_id}
+          character={character}
+        />
+      ))}
     </main>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

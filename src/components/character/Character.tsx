@@ -1,5 +1,5 @@
-import { Data } from "../../App";
-import "./Character.scss";
+import { Data } from '../../App';
+import './Character.scss';
 
 type CharacterProps = {
   character: Data;
@@ -7,13 +7,15 @@ type CharacterProps = {
 
 const Character = ({ character }: CharacterProps) => {
   const characterStatusColor =
-    character.status === "Alive"
-      ? "color-green"
-      : character.status === "Deceased"
-      ? "color-red"
-      : "color-yellow";
+    character.status === 'Alive'
+      ? 'color-green'
+      : character.status === 'Deceased'
+      ? 'color-red'
+      : 'color-yellow';
   return (
-    <div className='character'>
+    <article
+      className='character'
+      tabIndex={0}>
       <div className='character-inner'>
         <div className='character-front'>
           <img
@@ -29,25 +31,25 @@ const Character = ({ character }: CharacterProps) => {
             className='character-list'
             role='list'>
             <li className='character-item'>
-              <span className='character-subtitle'>Actor Name:</span>{" "}
+              <span className='character-subtitle'>Actor Name:</span>{' '}
               {character.portrayed}
             </li>
             <li className='character-item'>
-              <span className='character-subtitle'>Nickname:</span>{" "}
+              <span className='character-subtitle'>Nickname:</span>{' '}
               {character.nickname}
             </li>
             <li className='character-item'>
-              <span className='character-subtitle'>Birthday:</span>{" "}
+              <span className='character-subtitle'>Birthday:</span>{' '}
               {character.birthday}
             </li>
             <li className='character-item'>
-              <span className='character-subtitle'>Status:</span>{" "}
+              <span className='character-subtitle'>Status:</span>{' '}
               <span className={characterStatusColor}>{character.status}</span>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
