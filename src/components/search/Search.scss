@@ -1,8 +1,9 @@
 .search {
-  padding: 2rem;
+  margin: 2rem 0;
   text-align: center;
 
   &-input {
-    padding: .5rem;
+    min-width: 30%;
+    padding: 0.5rem;
   }
 }
