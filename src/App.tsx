@@ -47,8 +47,6 @@ function App() {
     }
   };
 
-  console.log(error);
-
   useEffect(() => {
     fetchData();
   }, [query]);
